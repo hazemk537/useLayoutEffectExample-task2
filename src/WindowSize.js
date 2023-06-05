@@ -3,29 +3,22 @@ import { useLayoutEffect } from 'react';
 import {useEffect} from  'react'
 
 function WindowSize() {
-  const [width,setWidth]=useState(100)
-   function handleResize() {
-      setWidth(window.innerWidth);
-    }
+ 
   
-    useLayoutEffect(() => {
-      console.log('useLayoutEffect');
-      window.addEventListener('resize', handleResize);
-
-      document.body.style.backgroundColor = width > 600 ? 'green' : 'red';
-      return () => window.removeEventListener('resize', handleResize);
-
-    }, [width]);
-  
+    useLayoutEffect(() => {      
+      alert("test")
    
-    useEffect(() => {
     }, []);
-  
+
+    //try it 
+    // useEffect(() => {      
+    //   alert("test")
+   
+    // }, []);
 
     
   return (
-
-    <div>windowSize is ${width}</div>
+    <div>Mounted! </div>
   )
 }
 
